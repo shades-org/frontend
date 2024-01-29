@@ -1,6 +1,7 @@
 import React from "react";
 import { CssBaseline, Typography, Container, Button, Box } from "@mui/material";
 import logo from "./logo.png";
+import GoogleIcon from '@mui/icons-material/Google';
 
 export default function LandingPage() {
   const buttonStyle = {
@@ -47,7 +48,8 @@ export default function LandingPage() {
           />
           <div>
             <Button variant="contained" style={buttonStyle}>
-              Sign In with Google
+              <GoogleIcon sx={{mr:"0.2rem",height:"22px"}}></GoogleIcon>
+               Sign In
             </Button>
             <Button variant="contained" style={buttonStyle}>
               Investors Log In
