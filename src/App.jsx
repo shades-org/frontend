@@ -1,22 +1,42 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
 import LandingPage from "./components/LandingPage";
-import { BrowserRouter,Routes, Route } from "react-router-dom";
-import UserPage from "./pages/UserPage";
-import Layout from "./layout/Layout";
-import UserPageDes from "./pages/UserPageDes";
-
+import {
+  CreatePitchPage,
+  ErrorPage,
+  InvestorLoginPage,
+  InvestorPitchPage,
+  InvestorPitchesPage,
+  PitcherPitchPage,
+  PitcherPitchesPage,
+  PitcherRegisterPage,
+  UpdatePitchPage,
+} from "./pages";
 
 const App = () => {
-  return <BrowserRouter>
-    <Routes >
-      <Route path="/" element={<LandingPage/>}/>
-      <Route path="/user" element = {<Layout/>}>
-      <Route index element={<UserPage/>} />
+  return (
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+
+      {/* Pitcher Routes */}
+      <Route path="/investor">
+        <Route path="login" element={<InvestorLoginPage />} />
+        <Route path="pitches" element={<InvestorPitchesPage />} />
+        <Route path="pitch/:id" element={<InvestorPitchPage />} />
       </Route>
-      <Route path="/user/description" element={<UserPageDes/>} />
+
+      {/* Investor Routes */}
+      <Route path="/pitcher">
+        <Route path="register" element={<PitcherRegisterPage />} />
+        <Route path="pitches" element={<PitcherPitchesPage />} />
+        <Route path="pitch/:id" element={<PitcherPitchPage />} />
+        <Route path="pitch/create" element={<CreatePitchPage />} />
+        <Route path="pitch/update/:id" element={<UpdatePitchPage />} />
+      </Route>
+
+      <Route path="*" element={<ErrorPage />} />
     </Routes>
-    </BrowserRouter>
-  
+  );
 };
 
 export default App;
