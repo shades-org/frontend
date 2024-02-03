@@ -16,7 +16,10 @@
     "@mui/material": "^5.15.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.21.3"
+    "react-player": "^2.14.1",
+    "react-rounded-image": "^2.0.15",
+    "react-router-dom": "^6.21.3",
+    "video-react": "^0.16.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
