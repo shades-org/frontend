@@ -1,5 +1,6 @@
 import { Box, Button, CssBaseline, Typography } from "@mui/material";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const cards = [{
     title : "hello guys",
@@ -10,6 +11,9 @@ const cards = [{
 }]
 
 export default function Card(){
+
+    const navigate = useNavigate();
+
     return   cards.map((card)=><div>
     <CssBaseline/>
     <Box sx={{
@@ -96,7 +100,7 @@ export default function Card(){
                 textTransform:"capitalize",
                 fontFamily:"Poppins, sans-serif",
                 px:"20px",
-            }} style={{backgroundColor:'#c3195d',boxShadow:"0 0 0 0"}}>See More</Button>
+            }} style={{backgroundColor:'#c3195d',boxShadow:"0 0 0 0"}} onClick={()=>navigate("/user/description")} >See More</Button>
         </Box>
     </Box>
 </div>)  

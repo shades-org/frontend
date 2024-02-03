@@ -5,10 +5,13 @@ import Pitchname from "@/components/Pitchname";
 import StakeHolder from "@/components/StakeHolder";
 import TagDes from "@/components/TagDes";
 import TurnOver from "@/components/TurnOver";
-import { Box, CssBaseline } from "@mui/material";
+import { Box, Button, CssBaseline } from "@mui/material";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function UserPageDes(){
+
+    const navigate=useNavigate()
     return <div>
         <CssBaseline/>
         <Box 
@@ -30,6 +33,14 @@ export default function UserPageDes(){
             <AdditionalPhotos></AdditionalPhotos>
             <TurnOver></TurnOver>
             <AddVideo></AddVideo>
+            <Button variant="contained" sx={{
+                bgcolor:"#c3195d",
+                height:"28px",
+                textTransform:"capitalize",
+                fontFamily:"Poppins, sans-serif",
+                px:"20px",
+                mb:"10px"
+            }} style={{backgroundColor:'#c3195d',boxShadow:"0 0 0 0"}} onClick={()=>navigate(-1)}>Close</Button>
         </Box>
     </div>
 }
