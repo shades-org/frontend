@@ -1,7 +1,7 @@
 export {
   InvestorLoginPage,
   InvestorPitchPage,
-  InvestorPitchesPage
+  InvestorPitchesPage,
 } from "./Investor";
 
 export {
@@ -9,12 +9,7 @@ export {
   PitcherPitchPage,
   PitcherPitchesPage,
   PitcherRegisterPage,
-  UpdatePitchPage
+  UpdatePitchPage,
 } from "./Pitcher";
 
 export { default as ErrorPage } from "./ErrorPage";
-
-export const a = 30;
-
-export { defa };
-[pfrfm] as } from ".flkkm"
