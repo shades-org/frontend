@@ -10,6 +10,7 @@ import {
   PitcherPitchPage,
   PitcherPitchesPage,
   PitcherRegisterPage,
+  StaticChatPage,
   UpdatePitchPage,
 } from "./pages";
 
@@ -33,6 +34,8 @@ const App = () => {
         <Route path="pitch/create" element={<CreatePitchPage />} />
         <Route path="pitch/update/:id" element={<UpdatePitchPage />} />
       </Route>
+
+      <Route path="/chat" element={<StaticChatPage />} />
 
       <Route path="*" element={<ErrorPage />} />
     </Routes>

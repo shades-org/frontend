@@ -12,4 +12,6 @@ export {
   UpdatePitchPage,
 } from "./Pitcher";
 
+export { StaticChatPage } from "./Chat"
+
 export { default as ErrorPage } from "./ErrorPage";
