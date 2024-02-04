@@ -13,6 +13,7 @@ import {
   PitcherRegisterPage,
   UpdatePitchPage,
 } from "./pages";
+import StaticChatPage from "./pages/ChatPage";
 
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
         <Route path="pitch/update/:id" element={<UpdatePitchPage />} />
       </Route>
 
+      <Route path="/chats" element={<StaticChatPage />} />
       <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
